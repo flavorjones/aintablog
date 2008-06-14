@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 h1. AintaBlog: Open Source Tumblogging
 
 h3. "aintablog.com":http://aintablog.com
@@ -34,3 +35,10 @@ h3. TODO
 * -Page titles!-
 * Page caching
 * More control over posts (publish_at, -commentable?-)
+* Graceful error handling if defensio key and/or yml file not present
+* Info on initial account
+* Test values are hardcoded
+* Adding feeds easier (eg, "flickr username", "twitter username", etc)
+* Retrieve posts when adding a feed
+* Get tests to run
+* Themes (templates + css)

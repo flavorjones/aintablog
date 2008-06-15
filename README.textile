@@ -21,7 +21,7 @@ If you want to run the test suite, you'll need the mocha gem.
 
   sudo gem install mocha
 
-I think that's about it.
+After that, head to http://[address]:[port]/users/new to create your account.
 
 You can run @rake gems:install@ to do it all in one fell swoop if you'd like.
 
@@ -36,7 +36,6 @@ h3. TODO
 * Page caching
 * More control over posts (publish_at, -commentable?-)
 * Graceful error handling if defensio key and/or yml file not present
-* Info on initial account
 * Adding feeds easier (eg, "flickr username", "twitter username", etc)
 * Retrieve posts when adding a feed
 * Get tests to run

@@ -37,7 +37,6 @@ h3. TODO
 * More control over posts (publish_at, -commentable?-)
 * Graceful error handling if defensio key and/or yml file not present
 * Info on initial account
-* Test values are hardcoded
 * Adding feeds easier (eg, "flickr username", "twitter username", etc)
 * Retrieve posts when adding a feed
 * Get tests to run

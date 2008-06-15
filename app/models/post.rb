@@ -18,11 +18,7 @@ class Post < ActiveRecord::Base
   end
   
   def self.per_page; 10; end
-
-  def name
-    self.header
-  end
-
+  
   def type
     attributes['type']
   end

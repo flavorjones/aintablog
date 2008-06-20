@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
   # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery :secret => '88b98c68052725f207bad5c1aec2355a'
 
+  # TODO - run this once, not before every instance
   def add_theme_path
     self.prepend_view_path "#{RAILS_ROOT}/themes/#{SITE_SETTINGS['theme']}"
   end

@@ -1,0 +1,13 @@
+<h3 class="entry-title"><%= spanned_link post.header, post.link %></h3>
+
+<div class="date">
+  <span class="month"><%= post.created_at.strftime('%b') %></span>
+  <span class="day"><%= post.created_at.strftime('%e') %></span>
+</div>
+
+  <div class="meta"> 
+    <% if logged_in? -%>
+    <%= link_to 'Edit', edit_article_path(post) unless post.from_feed? %>
+    <%= link_to 'Destroy', article_path(post), :method => :delete, :confirm => "Click OK to delete this post forever." %>
+    <% end %>
+  </div>

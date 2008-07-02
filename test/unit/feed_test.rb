@@ -47,7 +47,7 @@ class FeedTest < ActiveSupport::TestCase
   def test_should_have_entries
     feed = create_feed :uri => "file://#{MOCK_ROOT}/daringfireball.xml"
     assert_not_nil feed.entries
-    assert ! feed.entries.empty?
+    assert_equal 27, feed.entries.size
   end
 
 protected

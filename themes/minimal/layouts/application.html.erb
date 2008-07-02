@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title><%= yield :title %><%= SITE_SETTINGS['site_title'] %></title>
+  <meta name="generator" content="emacs">
+  <meta name="author" content="JD Huntington">
+  <link href="/theme_assets/application.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/theme_assets/article.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/theme_assets/comments.css" media="screen" rel="stylesheet" type="text/css" />
+  <%= stylesheet_link_tag 'admin' if logged_in? %>
+  <%= javascript_include_tag 'prototype', 'effects', 'extensions', 'application', :cache => 'all' %>
+  <%= javascript_include_tag 'admin' if logged_in? %>
+  <%= javascript_tag "window._token = '#{form_authenticity_token}'" %>
+</head>
+<body>
+  <%= render :partial => "shared/admin" if logged_in? %>
+  <div <%= %{class="admin"} if params[:action].match(/new|edit/) || params[:controller].match(/comments/) %> id="all">
+    <div id="header">
+      <%= yield :header -%>
+      <%= flash_message(:notice) %>
+      <%= flash_message(:error) %>
+    </div>
+    <div id="content">
+      <%= yield -%>
+    </div>
+    <div id="footer">
+      <%= yield :footer -%>
+    </div>
+    <small id="credits">Powered by <a href="http://aintablog.com">aintablog</a></small>
+  </div>  
+</body>
+</html>

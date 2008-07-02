@@ -9,3 +9,4 @@ config/defensio.yml
 Capfile
 public/cache
 public/cache/**
+*~

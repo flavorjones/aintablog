@@ -21,7 +21,7 @@ class Post < ActiveRecord::Base
   def name
     header
   end
-  
+
   def type
     attributes['type']
   end

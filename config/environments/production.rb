@@ -17,3 +17,6 @@ config.action_view.cache_template_loading            = true
 
 # Disable delivery errors, bad email addresses will be ignored
 # config.action_mailer.raise_delivery_errors = false
+
+# to match mongrel's prefix. see http://kudelabs.com/2008/10/09/mongrel-prefix-does-not-properly-notify-rails-2-1-1
+ActionController::Base.relative_url_root = "/aintablog"

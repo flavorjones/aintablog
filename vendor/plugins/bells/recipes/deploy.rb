@@ -7,15 +7,15 @@ namespace :deploy do
   end
 
   task :restart do
-    thin.restart
+    mongrel.restart
   end
   
   task :start do
-    thin.start
+    mongrel.start
   end
   
   task :stop do
-    thin.stop
+    mongrel.stop
   end
 
   desc "Shows tail of production log"

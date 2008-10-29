@@ -19,4 +19,8 @@ config.action_view.cache_template_loading            = true
 # config.action_mailer.raise_delivery_errors = false
 
 # to match mongrel's prefix. see http://kudelabs.com/2008/10/09/mongrel-prefix-does-not-properly-notify-rails-2-1-1
-ActionController::Base.relative_url_root = "/aintablog"
+if ActionController::Base.respond_to?('relative_url_root=')
+  ActionController::Base.relative_url_root = "/aintablog" # new way to set the relative URL in Rails 2.1.1
+else
+  ActionController::AbstractRequest.relative_url_root = "/aintablog"
+end

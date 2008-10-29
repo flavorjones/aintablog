@@ -480,7 +480,7 @@ module ActionView
                 source
               else
                 source = "/#{dir}/#{source}" unless source[0] == ?/
-                if has_request
+                if has_request && include_host
                   unless source =~ %r{^#{@controller.request.relative_url_root}/}
                     source = "#{@controller.request.relative_url_root}#{source}"
                   end

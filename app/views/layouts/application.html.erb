@@ -18,6 +18,7 @@
 </head>
 <body>
   <%= render :partial => 'shared/admin' if logged_in? %>
+  <div style='position:absolute; top:50px; right:1em; font-weight:bold; font-family:Helvetica; font-size: 20px'><a href='/'>home</a></div>
   <div <%= %{class="admin"} if params[:action].match(/new|edit/) || params[:controller].match(/comments/) %> id="all">
     <div id="header">
       <%= yield :header -%>

@@ -54,11 +54,18 @@
   color: black;
 }
 
-.article .entry pre, .article .entry pre code {
+.article .entry pre {
   font-size: 12px;
-  padding: 1em 0;
+  padding-left: 1em ;
   font-family: Monaco, Courier, monospace;
   line-height: 1.3em;
+}
+
+.article .entry pre code {
+  display: block ;
+  border: 1px #aaa solid ;
+  padding: 1em ;
+  background-color: #eef ;
 }
 
 .article .entry blockquote, .article .entry blockquote p {

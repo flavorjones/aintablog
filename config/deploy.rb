@@ -10,7 +10,7 @@ set :application, "aintablog"
 # need to add entry to .ssh/config to set remote username to dalessio
 set :repository, "ssh://dalessio.csa.net/var/cache/git/daless.io/#{application}"
 set :scm, :git
-set :branch, "deploy"
+set :branch, "deploy-with-http-post-for-carl"
 set :user, "mike"
 set :password, "the sounds of science"
 set :runner, "mike"

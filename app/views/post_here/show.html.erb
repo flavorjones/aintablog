@@ -1,0 +1,36 @@
+<html>
+<head>
+<style>
+pre {
+  border: 1px solid #888 ;
+  padding: 1em ;
+  margin: 1em ;
+}
+</style>
+</head>
+<body>
+<h2>File Upload Test</h2>
+
+<p>
+Please upload only text files, and only ones that are a KB or two at most. This is only a test.
+</p>
+
+<% form_tag({:action => 'create'}, {:method => 'post', :multipart => true}) do -%>
+  <%= text_field_tag :text %>
+  <br>
+  <%= submit_tag "OK" %>
+<% end -%>
+
+<% form_tag({:action => 'create'}, {:method => 'post', :multipart => true}) do -%>
+  <%= file_field_tag :upload %>
+  <br>
+  <%= submit_tag "OK" %>
+<% end -%>
+
+<% if @contents -%>
+  You just uploaded the following content:
+<pre><%= h @contents %></pre>
+<% end -%>
+
+</body>
+</html>

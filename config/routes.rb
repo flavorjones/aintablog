@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :post_here
   map.resources :feeds, :collection => { :refresh => :post }  
   map.resources :posts
   map.resources :users
